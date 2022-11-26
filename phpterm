@@ -1,0 +1,72 @@
+
+
+<?php
+if($_SERVER['REQUEST_METHOD']=='POST'){
+
+
+$dsn = 'mysql:dbname=carsproject;host=35.223.119.171';
+$user = 'gbleehaiproject';
+$password = 'cobra2004';
+
+
+$text1 = %_POST['textarea ']
+$sql = $text1; 
+
+'SELECT COUNT(*) FROM Location_T;
+//echo $_POST['mytextarea'];
+try {
+	$pdo = new PDO($dsn, $user, $password);
+
+	if ($pdo) {
+//		echo "Connected to the $db database successfully!";
+
+
+
+';
+//var_dump()
+//$mydata = $pdo->query($_POST['mytextarea']);
+
+
+foreach ($pdo->query($sql) as $row) {
+  var_dump($row);
+}
+
+
+
+	}
+} catch (PDOException $e) {
+	echo $e->getMessage();
+}
+
+}
+
+
+?>
+
+
+<html>
+<head>
+  <title>MESSAGE BOX</title>
+</head>
+<body>
+
+  <form class="" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+    <textarea
+
+
+     name="mytextarea"rows="20" Cols="30">ENTER YOUR MESSAGE HERE</textarea>
+    <input type="submit" name="submit" value="SEND">
+-- while loop?
+  </form>
+
+<?php var_dump($mydata)?>
+--
+</body>
+h1>This is my first page</hl><br>
+<a herf="kekleeproj.htm">CLICK HERE</a>
+</html>
+
+
+--NEED TO EMBED PHP IN HTML
+--link to database + take in sql
+--im missing return
